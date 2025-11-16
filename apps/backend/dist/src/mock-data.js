@@ -1,0 +1,122 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mockIdempotencyKeys = exports.mockMailbox = exports.mockRegistrations = exports.mockCompetitions = exports.mockUsers = void 0;
+exports.mockUsers = [
+    {
+        id: 'org1',
+        email: 'organizer1@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Organizer One',
+        role: 'organizer',
+        createdAt: new Date(),
+    },
+    {
+        id: 'org2',
+        email: 'organizer2@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Organizer Two',
+        role: 'organizer',
+        createdAt: new Date(),
+    },
+    {
+        id: 'part1',
+        email: 'participant1@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Participant 1',
+        role: 'participant',
+        createdAt: new Date(),
+    },
+    {
+        id: 'part2',
+        email: 'participant2@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Participant 2',
+        role: 'participant',
+        createdAt: new Date(),
+    },
+    {
+        id: 'part3',
+        email: 'participant3@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Participant 3',
+        role: 'participant',
+        createdAt: new Date(),
+    },
+    {
+        id: 'part4',
+        email: 'participant4@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Participant 4',
+        role: 'participant',
+        createdAt: new Date(),
+    },
+    {
+        id: 'part5',
+        email: 'participant5@test.com',
+        password: '$2b$10$PB1dfVtHelw4NaEUqGtdeuihJfNfvZL.tKRUMabNz.hH5QF5w4.ZK',
+        name: 'Participant 5',
+        role: 'participant',
+        createdAt: new Date(),
+    },
+];
+exports.mockCompetitions = [
+    {
+        id: 'comp1',
+        title: 'Web Dev Hackathon',
+        description: 'Build a web app in 48 hours',
+        tags: ['web', 'javascript'],
+        capacity: 50,
+        regDeadline: new Date('2025-12-31'),
+        organizerId: 'org1',
+        seatsLeft: 50,
+        createdAt: new Date(),
+    },
+    {
+        id: 'comp2',
+        title: 'AI Challenge',
+        description: 'Create an AI solution',
+        tags: ['ai', 'ml'],
+        capacity: 30,
+        regDeadline: new Date('2025-12-25'),
+        organizerId: 'org1',
+        seatsLeft: 30,
+        createdAt: new Date(),
+    },
+    {
+        id: 'comp3',
+        title: 'Mobile App Contest',
+        description: 'Develop a mobile application',
+        tags: ['mobile', 'app'],
+        capacity: 40,
+        regDeadline: new Date('2025-12-20'),
+        organizerId: 'org2',
+        seatsLeft: 40,
+        createdAt: new Date(),
+    },
+    {
+        id: 'comp4',
+        title: 'Data Science Sprint',
+        description: 'Analyze and visualize data',
+        tags: ['data', 'analytics'],
+        capacity: 25,
+        regDeadline: new Date('2025-11-30'),
+        organizerId: 'org2',
+        seatsLeft: 25,
+        createdAt: new Date(),
+    },
+    {
+        id: 'comp5',
+        title: 'Startup Pitch Competition',
+        description: 'Pitch your startup idea',
+        tags: ['startup', 'business'],
+        capacity: 20,
+        regDeadline: new Date('2025-12-15'),
+        organizerId: 'org1',
+        seatsLeft: 20,
+        createdAt: new Date(),
+    },
+];
+exports.mockRegistrations = [];
+exports.mockMailbox = [];
+exports.mockIdempotencyKeys = new Set();
+//# sourceMappingURL=mock-data.js.map

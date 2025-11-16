@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String          @id @default(uuid())
+  email         String          @unique
+  password      String
+  name          String
+  role          Role
+  competitions  Competition[]
+  registrations Registration[]
+  mailbox       MailBox[]
+  createdAt     DateTime        @default(now())
+}
+
+model Competition {
+  id            String          @id @default(uuid())
+  title         String
+  description   String
+  tags          String[]
+  capacity      Int
+  regDeadline   DateTime
+  organizer     User            @relation(fields: [organizerId], references: [id])
+  organizerId   String
+  registrations Registration[]
+  seatsLeft     Int
+  createdAt     DateTime        @default(now())
+}
+
+model Registration {
+  id              String            @id @default(uuid())
+  user            User              @relation(fields: [userId], references: [id])
+  userId          String
+  competition     Competition       @relation(fields: [competitionId], references: [id])
+  competitionId   String
+  status          String            @default("confirmed")
+  idempotencyKey  IdempotencyKey?
+  createdAt       DateTime          @default(now())
+
+  @@unique([userId, competitionId])
+}
+
+model MailBox {
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  to        String
+  subject   String
+  body      String
+  sentAt    DateTime @default(now())
+}
+
+model FailedJob {
+  id        String   @id @default(uuid())
+  jobData   String
+  error     String
+  failedAt  DateTime @default(now())
+}
+
+model IdempotencyKey {
+  key            String        @id
+  registration   Registration  @relation(fields: [registrationId], references: [id])
+  registrationId String        @unique
+  createdAt      DateTime      @default(now())
+
+  @@index([createdAt])
+}
+
+enum Role {
+  participant
+  organizer
+}
