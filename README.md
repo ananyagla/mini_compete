@@ -19,37 +19,38 @@ The platform supports organizers, participants, competition creation, safe regis
 
 <table>
   <tr>
-    <td align="center" style="border:2px solid white; padding:12px; margin:10px;">
-      <img src="previews/p1.png" width="350" />
-      <br><b>Login / Sign Up Page</b>
+    <td align="center" style="border:2px solid white; padding:16px;">
+      <img src="previews/p1.png" width="420" height="260" />
+      <br><b>Preview 1</b>
     </td>
-    <td align="center" style="border:2px solid white; padding:12px; margin:10px;">
-      <img src="previews/p2.png" width="350" />
-      <br><b>AWS Credential Page</b>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" style="border:2px solid white; padding:12px; margin:10px;">
-      <img src="previews/p3.png" width="350" />
-      <br><b>Cost Dashboard</b>
-    </td>
-    <td align="center" style="border:2px solid white; padding:12px; margin:10px;">
-      <img src="previews/p4.png" width="350" />
-      <br><b>Infrastructure Dashboard</b>
+    <td align="center" style="border:2px solid white; padding:16px;">
+      <img src="previews/p2.png" width="420" height="260" />
+      <br><b>Preview 2</b>
     </td>
   </tr>
+
   <tr>
-    <td align="center" style="border:2px solid white; padding:12px; margin:10px;">
-      <img src="previews/p5.png" width="350" />
-      <br><b>Instance Management Dashboard</b>
+    <td align="center" style="border:2px solid white; padding:16px;">
+      <img src="previews/p3.png" width="420" height="260" />
+      <br><b>Preview 3</b>
     </td>
-    <td align="center" style="border:2px solid white; padding:12px; margin:10px;">
-      <img src="previews/p6.png" width="350" />
-      <br><b>History Logs & AI Assistant</b>
+    <td align="center" style="border:2px solid white; padding:16px;">
+      <img src="previews/p4.png" width="420" height="260" />
+      <br><b>Preview 4</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" style="border:2px solid white; padding:16px;">
+      <img src="previews/p5.png" width="420" height="260" />
+      <br><b>Preview 5</b>
+    </td>
+    <td align="center" style="border:2px solid white; padding:16px;">
+      <img src="previews/p6.png" width="420" height="260" />
+      <br><b>Preview 6</b>
     </td>
   </tr>
 </table>
-
 
 
 ---
@@ -297,5 +298,6 @@ Reset database:
 cd apps/backend
 npx prisma migrate reset
 ```
+
 
 
